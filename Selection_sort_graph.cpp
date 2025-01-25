@@ -45,7 +45,7 @@ int main()
 
         total_time += duration;
     }
-    double avg_time = total_time / 10.0 / 1000.0;
+    double avg_time = total_time / 10.0 / 1000.0; // avg_time is in microseconds
 
     // print - showing n on x-axis and avg_time on y-axis
 
