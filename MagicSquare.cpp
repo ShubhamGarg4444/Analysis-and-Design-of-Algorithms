@@ -4,9 +4,12 @@
 #include <vector>
 using namespace std;
 
-bool isMagicSquare(vector<vector<int>>& grid) {
-    int n = grid.size();
-    if (n == 0) return false; // Edge case
+bool isMagicSquare(vector<vector<int>>& grid) 
+{
+    int n = grid.size(); // square matrix
+
+    if (n == 0) 
+    return false; 
 
     int sum1 = 0, sum2 = 0;
 
@@ -22,14 +25,16 @@ bool isMagicSquare(vector<vector<int>>& grid) {
         return false;
 
     // Checking rows and columns
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++) 
+    {
         int rowSum = 0, colSum = 0;
-        for (int j = 0; j < n; j++) {
+        for (int j = 0; j < n; j++) 
+        {
             rowSum += grid[i][j];
             colSum += grid[j][i];
         }
-        if (rowSum != sum1 || colSum != sum1)
-            return false;
+        if (rowSum != sum1 || colSum != sum1 || rowSum != colSum)
+        return false;
     }
 
     return true;
