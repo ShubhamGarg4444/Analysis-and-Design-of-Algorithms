@@ -91,7 +91,7 @@ void cosineSim()
 
 int main()
 {
-    cosineSim();
-    return 0;
+    cosineSim() ;
+    return 0 ;
 }
 
