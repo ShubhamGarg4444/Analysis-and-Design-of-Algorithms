@@ -65,7 +65,6 @@ void primMST(vector<vector<int>> &graph)
     printMST(parent, graph);
 }
 
-// Driver's code
 int main() {
       vector<vector<int>> graph = { { 0, 2, 0, 6, 0 },
                                 { 2, 0, 3, 8, 5 },
