@@ -6,7 +6,7 @@ int Sum(int arr[], int n)
     if(n==0)
     return 0 ;
 
-    return arr[n-1] + Sum(arr,n-1) ;
+    return arr[n-1] + Sum(arr,n-1) ; 
 }
 
 int main()

@@ -52,11 +52,14 @@ using namespace std ;
 
 int peek(int arr[], int n, int s, int e)
 {
-    // base case
-    if (s == e)  // When search space reduces to a single element
-    return arr[s];
-
     int mid = s + (e-s)/2 ;
+
+     // Check if mid is a peak
+    if ((mid == 0 || arr[mid] >= arr[mid - 1]) && 
+        (mid == n - 1 || arr[mid] >= arr[mid + 1])) 
+    {
+        return arr[mid];
+    }
 
     if(arr[mid] < arr[mid-1]) // if left neighbor is greater, search left
     {
@@ -66,7 +69,6 @@ int peek(int arr[], int n, int s, int e)
     {
         return peek(arr,n,mid+1,e) ; 
     }
-    return arr[mid] ;
 }
 
 int main()
