@@ -43,7 +43,7 @@ int main()
 
     int maxProfit = knp(p,w,W,n) ;
 
-    cout<<"Maximum profit earned = "<<maxProfit<<endl;
+    cout<<"Maximum profit earned = "<<maxProfit<<endl ;
 
     return 0 ;
 }
